@@ -20,8 +20,8 @@ const FILTER_MAP = {
 
 const FILTER_NAMES = Object.keys(FILTER_MAP);
 
-function App(props) {
-  const [tasks, setTasks] = useState(props.tasks);
+function App() {
+  const [tasks, setTasks] = useState({});
   const [filter, setFilter] = useState("All");
 
   const toggleTaskCompleted = (id) => {
@@ -109,8 +109,7 @@ function App(props) {
       </h2>
       <ul
         className='todo-list stack-large stack exception'
-        aria-labelledby='list-heading'
-      >
+        aria-labelledby='list-heading'>
         {taskList}
       </ul>
     </div>
